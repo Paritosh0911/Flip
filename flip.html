@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy B'Day Bhai</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            height: 100%;
+            
+            
+            }
+        #con{
+            height: 450px;
+            width: 550;
+            position: absolute;
+            top: 0;
+            
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            float: left;
+            perspective: 500px;
+        }
+        #a{
+            float: left;
+            margin-left: 400px;
+            margin-right: auto;
+            margin-top: 30px;
+            height: 400px;
+            width: 300px;
+            background: #eeaf03;
+            transform: rotate3d(0,1,0,30deg);
+            border: 5px solid #fff;
+            box-shadow: 30px 20px 1px #000, -22px 15px 4px #8c8c8c;
+           
+        }
+        #b{
+            float: left;
+            margin-left: auto;
+            margin-right: 300px;
+            margin-top: 30px;
+            
+            height: 400px;
+            width: 300px;
+            background: #d0ff00;
+            transform: rotate3d(0,-1,0,30deg);
+            border: 5px solid #fff;
+            box-shadow: -30px 20px 1px #000, 22px 15px 4px #8c8c8c;
+        }
+        #c{
+            position: absolute;
+            top: 0px;
+            left: 310px;
+            margin-left: 400px;
+            margin-right: auto;
+            margin-top: 30px;
+            height: 400px;
+            width: 300px;
+            background: #30b0d6;
+            transform: rotate3d(0,-1,0,30deg);
+            border: 5px solid #fff;
+            z-index: 9;
+            
+            
+        }
+        #d{
+            position: absolute;
+            top: 0px;
+            left: 310px;
+            margin-left: 400px;
+            margin-right: auto;
+            margin-top: 30px;
+            height: 400px;
+            width: 300px;
+            background: #00cc66;
+            transform: rotate3d(0,-1,0,30deg);
+            border: 5px solid #fff;
+            z-index: 8;
+        }
+        #e{
+            position: absolute;
+            top: 0px;
+            left: 310px;
+            margin-left: 400px;
+            margin-right: auto;
+            margin-top: 30px;
+            height: 400px;
+            width: 300px;
+            background: #d466ff;
+            transform: rotate3d(0,-1,0,30deg);
+            border: 5px solid #fff;
+            z-index: 7;
+        }
+        #f{
+            position: absolute;
+            top: 0px;
+            left: 310px;
+            margin-left: 400px;
+            margin-right: auto;
+            margin-top: 30px;
+            height: 400px;
+            width: 300px;
+            background: #66faff;
+            transform: rotate3d(0,-1,0,30deg);
+            border: 5px solid #fff;
+            z-index: 6;
+        }
+        #g{
+            position: absolute;
+            top: 0px;
+            left: 310px;
+            margin-left: 400px;
+            margin-top: 30px;
+            margin-right: auto;
+            height: 400px;
+            width: 300px;
+            background: #ff6680;
+            transform: rotate3d(0,-1,0,30deg);
+            border: 5px solid #fff;
+            z-index: 5;
+        }
+        @keyframes flip{
+            0%{transform: rotate3d(0,-1,0,30deg);}
+            50%{transform: rotateY(180deg);}
+            100%{transform: rotate3d(0,1,0,30deg);
+            top: 0;
+            left: 0;
+            }
+        }
+        img{
+            height: 290px;
+            width: 270px;
+            margin-left: 20px;
+          
+        }
+        h2#front{
+            text-align: Center;
+            color: black;
+            margin-top: 70px;
+            font-size: 30px;
+            
+        }
+        h2{
+            text-align: Center;
+            color: black;
+        
+            
+            
+        }
+        h3{
+            text-align: center;
+        }
+        h3#hbd{
+            text-align: center;
+            font-size: 30px;
+            letter-spacing: 5px;
+            color: #056692;
+        }
+
+        /*  Flip Card*/
+        .maincontainer{
+            position: relative;
+            width: 250px;
+            height: 320px;
+            margin-top: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
+      
+        .thecard{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: all 0.5s ease;
+            
+        }
+
+        .thecard:hover{
+            transform: rotateY(180deg);
+        }
+        .thefront{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            background: yellow;
+            color: darkgray;
+            text-align: center;
+            font-family: 'zilla slab', sans-serif;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .theback{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            background: yellowgreen;
+            color: darkgray;
+            transform: rotateY(180deg);
+            text-align: center;
+            font-family: 'zilla slab', sans-serif;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 18px;
+
+        }
+
+        img.fc{
+            width: 250px;
+            height: 320px;
+            border-radius: 20px;
+          
+            margin-left: 0px;
+        }
+
+        /*Animated BG*/
+        #myDIV {
+  width: 100%;
+  height: 1300px;
+ 
+  
+  border: 3px solid black;
+  background-image: url('bg.png');
+  background-position: top;
+  animation: mymove 2s infinite;
+}
+
+@keyframes mymove {
+  50% {background-position: center;}
+}
+    </style>
+</head>
+<body>
+    <div id="myDIV">
+    <h2 style="color: #ee9510;font-family: cursive; letter-spacing: 10px;font-size: 30px;">Happy B'day Bhai!!!</h2>
+    <h2 style="font-family: cursive;letter-spacing: 5px;font-size: 20px;">OLD MEMORIES...</h2>
+    <div id="con">
+        <div id="a">
+            <h2 id="front"> <i><b>HAPPY</b></i> <br><br><br> <i><b>B'DAY</b></i> <br><br><br> <i><b>BHAI !!</b></i> </h2>
+        </div>
+        <div id="b">
+            <h2><i><b>It's the Day...</b></i><br><br><i><b>When I remind you that...</b></i><br><br>
+                <i><b>I am Older Than You..</b></i><br><br><i><b>And Always Will Be...</b></i></h2>
+            <h3 id="hbd"><i><b>Happy B'day!!</b></i></h3>
+        </div>
+        <div id="c" onclick="go1()">
+            <h3><i><b>OLD MEMORIES..</b></i></h3>
+            <img src="3.jpg" alt="">
+        
+        </div>
+        <div id="d" onclick="go2()">
+            <h3><i><b>KANS MAMA..</b></i></h3>
+            <img src="2.jpg" alt="">
+        </div>
+        <div id="e" onclick="go3()">
+            <h3><i><b>Because I have a brother, <br> I'll always have a friend.</b></i></h3>
+            <img src="4.jpg" alt="">
+           
+        </div>
+        <div id="f" onclick="go4()">
+            <h3>CRIME PARTNERS</h3>
+            <img src="1.jpg" alt="">
+        </div>
+        <div id="g" onclick="go5()">
+            <h3><i>Phoolo ka, Taaron ka...Sabka Kehna h...Ek Hazaar Kilo ka Mera Pyaara Bhaiya h..!!!</i></h3>
+            <img src="5.jpg" alt="">
+        </div>
+    </div>
+    <!--flip card-->
+    
+    <div class="maincontainer">
+        <h2 id="hfc" style="font-family: cursive;text-align: center;font-size: 30px;color: teal;">Certificate For You.....</h2>
+        <div class="thecard">
+
+            <div class="thefront">
+                <img class="fc" src="fc1.jpg" alt="Pic">
+            </div>
+
+            <div class="theback">
+                <img class="fc" src="fc2.jpg" alt="Certificate">
+            </div>
+
+        </div>
+    </div>
+
+    <!--Script flipbook-->
+    <script>
+        var cc=document.getElementById("c");
+        var dd=document.getElementById("d");
+        var ee=document.getElementById("e");
+        var ff=document.getElementById("f");
+        var gg=document.getElementById("g");
+
+        cc.addEventListener("animationend", flip1);
+        function flip1(){
+            cc.style.transform="rotate3d(0,1,0,30deg)";
+            cc.style.top=0;
+            cc.style.left=0;
+            cc.style.zIndex="1";
+        }
+
+        dd.addEventListener("animationend", flip2);
+        function flip2(){
+            dd.style.transform="rotate3d(0,1,0,30deg)";
+            dd.style.top=0;
+            dd.style.left=0;
+            dd.style.zIndex="1";
+        }
+
+        ee.addEventListener("animationend", flip3);
+        function flip3(){
+            ee.style.transform="rotate3d(0,1,0,30deg)";
+            ee.style.top=0;
+            ee.style.left=0;
+            ee.style.zIndex="1";
+        }
+
+        ff.addEventListener("animationend", flip4);
+        function flip4(){
+            ff.style.transform="rotate3d(0,1,0,30deg)";
+            ff.style.top=0;
+            ff.style.left=0;
+            ff.style.zIndex="1";
+        }
+
+        gg.addEventListener("animationend", flip5);
+        function flip5(){
+            gg.style.transform="rotate3d(0,1,0,30deg)";
+            gg.style.top=0;
+            gg.style.left=0;
+            gg.style.zIndex="1";
+        }
+        function go1(){
+            cc.style.animation="flip 3s 1";
+        }
+
+        
+        function go2(){
+            dd.style.animation="flip 3s 1";
+        }
+
+        
+        function go3(){
+            ee.style.animation="flip 3s 1";
+        }
+
+        function go4(){
+            ff.style.animation="flip 3s 1";
+        }
+
+        
+        function go5(){
+            gg.style.animation="flip 3s 1";
+        }
+    </script>
+    </div>
+</body>
+</html>
